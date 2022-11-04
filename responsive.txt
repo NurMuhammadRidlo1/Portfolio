@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #e69a20;
+  --secondary-color: #f26116;
+  --background-color: #201f1f;
+  --background-color-addition: #474747;
+}
+
+body {
+  background-color: var(--background-color);
+  color: white;
+}
+
+section {
+  padding: 5%;
+  padding-top: 1rem;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+.logo h3 {
+  font-family: "roboto", sans-serif;
+  margin-left: 0.8rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.links {
+  font-family: "roboto", sans-serif;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 30vw;
+  transition-duration: 0.5s;
+}
+.links a {
+  text-decoration: none;
+  color: white;
+}
+.links a:hover {
+  opacity: 0.8;
+  color: var(--primary-color);
+}
+
+.hamburger {
+  z-index: 1;
+  display: none;
+}
+.hamburger span {
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  background-color: white;
+  margin: 8px 0;
+  transition-duration: 0.5s;
+}
+.hamburger span:nth-child(1) {
+  width: 1rem;
+}
+.hamburger span:nth-child(2) {
+  width: 1.5rem;
+}
+.hamburger:hover span:nth-child(1) {
+  width: 2.5rem;
+}
+.hamburger:hover span:nth-child(2) {
+  width: 2.5rem;
+}
+
+.hero {
+  height: 92vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "kanit", sans-serif;
+  width: 60vw;
+  margin: auto;
+  text-align: center;
+}
+.hero h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-size: 4.5rem;
+}
+.hero h4 {
+  font-family: "roboto", sans-serif;
+  font-weight: 400;
+  margin-top: 2rem;
+  width: 70%;
+}
+
+.hero .button {
+  text-align: center;
+}
