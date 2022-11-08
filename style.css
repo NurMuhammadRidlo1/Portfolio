@@ -39,6 +39,7 @@ nav .logo {
   margin-left: 0.8rem;
   letter-spacing: 0.1rem;
   cursor: pointer;
+  font-size: 1.2rem;
 }
 
 .links {
@@ -59,6 +60,7 @@ nav .logo {
   color: white;
   color: black;
   font-weight: 500;
+  font-size: 1.2rem;
 }
 .links a:hover {
   opacity: 0.6;
@@ -114,7 +116,6 @@ nav .logo {
 .hero h4 {
   font-family: "roboto", sans-serif;
   font-size: 1rem;
-  font-size: 0.8rem;
   font-weight: 400;
   margin-top: 2.5rem;
   margin-bottom: 2rem;
@@ -173,6 +174,9 @@ nav .logo {
 .project .project-img {
   width: 90vw;
   margin-top: 2rem;
+}
+.project .project-img:hover {
+  opacity: 0.7;
 }
 .project a.link-project {
   text-decoration: none;
@@ -239,13 +243,28 @@ footer p {
   font-family: "roboto", sans-serif;
   margin-bottom: 1rem;
 }
+footer p a {
+  text-decoration: none;
+  color: white;
+}
+footer p a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
 footer .social-media {
   width: 7rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 2rem;
 }
-footer a {
+footer .social-media a:hover {
+  opacity: 0.7;
+}
+footer .social-media img {
+  width: 1.2rem;
+}
+footer a.button {
   padding: 0.7rem 1.5rem;
   border-radius: 3rem;
   text-decoration: none;
@@ -256,11 +275,12 @@ footer a {
   font-size: 0.8rem;
   border: 3px solid var(--secondary-color);
 }
-footer a:hover {
+footer a.button:hover {
   background-color: transparent;
   border: 3px solid var(--secondary-color);
 }
 
+/*! RESPONSIVE  */
 @media screen and (min-width: 768px) {
   .hero-section {
     padding: 10%;
@@ -287,6 +307,9 @@ footer a:hover {
     text-decoration: 0;
   }
 
+  .hero {
+    margin-top: 3rem;
+  }
   .hamburger {
     display: none;
   }
@@ -388,6 +411,7 @@ footer a:hover {
     width: 40vw;
   }
   /*! WORK SECION */
+
   .project a.link-project {
     display: flex;
     margin-top: -7rem;

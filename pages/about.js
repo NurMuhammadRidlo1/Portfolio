@@ -13,7 +13,7 @@ burger.addEventListener("click", () => {
       { opacity: 0, y: 0 },
       { opacity: 1, y: 20, delay: 0.4, stagger: 0.25 }
     );
-    //  gsap.set("body", { overflow: "hidden" });
+    // gsap.set("body", { overflow: "hidden" });
   }
 });
 

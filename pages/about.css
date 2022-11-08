@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #e69a20;
+  --secondary-color: #f26116;
+  --background-color: #201f1f;
+  --background-color-addition: #474747;
+}
+
+body {
+  color: white;
+  background-color: var(--background-color);
+}
+
+.hero-section {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background-color);
+}
+
+nav {
+  margin: auto;
+  width: 80vw;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+.logo h3 {
+  font-family: "roboto", sans-serif;
+  margin-left: 0.8rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+.links {
+  font-family: "roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.links a {
+  text-decoration: none;
+  color: white;
+  color: black;
+  font-weight: 500;
+}
+.links a:hover {
+  opacity: 0.6;
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.hamburger {
+  z-index: 1;
+  margin-right: 1.2rem;
+}
+.hamburger span {
+  display: block;
+  width: 2.5rem;
+  height: 3px;
+  background-color: white;
+  margin: 8px 0;
+  transition-duration: 0.5s;
+}
+.hamburger span:nth-child(1) {
+  width: 1rem;
+}
+.hamburger span:nth-child(2) {
+  width: 1.5rem;
+}
+.hamburger:hover span:nth-child(1) {
+  width: 2.5rem;
+}
+.hamburger:hover span:nth-child(2) {
+  width: 2.5rem;
+}
+
+.top-wave {
+  width: 100vw;
+}
+.bottom-wave {
+  width: 100vw;
+  height: 20vh;
+}
+/*! HERO  */
+.hero {
+  font-family: "kanit", sans-serif;
+  margin: auto;
+  text-align: start;
+  padding: 0 10vw;
+  width: 100vw;
+  margin-top: -0.5rem;
+  margin-bottom: -2rem;
+  background-color: var(--background-color-addition);
+}
+
+.hero h1 {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.hero p {
+  font-family: "roboto", sans-serif;
+  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+/*! Footer  */
+footer {
+  width: 100vw;
+  margin: 5rem 0;
+}
+footer .container {
+  margin: auto;
+  width: 80vw;
+}
+footer h2 {
+  font-family: "kanit", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+footer p {
+  font-family: "roboto", sans-serif;
+  margin-bottom: 1rem;
+}
+footer p a {
+  text-decoration: none;
+  color: white;
+}
+footer p a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+footer .social-media {
+  width: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+footer .social-media a:hover {
+  opacity: 0.7;
+}
+footer .social-media img {
+  width: 1.2rem;
+}
+footer a.button {
+  padding: 0.7rem 1.5rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  font-family: "roboto", sans-serif;
+  color: white;
+  background-color: var(--secondary-color);
+  border: none;
+  font-size: 0.8rem;
+  border: 3px solid var(--secondary-color);
+}
+footer a.button:hover {
+  background-color: transparent;
+  border: 3px solid var(--secondary-color);
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
+  .links {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40vw;
+    height: fit-content;
+    text-align: center;
+    position: static;
+    background-color: transparent;
+  }
+  .links a {
+    color: white;
+  }
+  .links a:hover {
+    color: white;
+    text-decoration: 0;
+  }
+  .hamburger {
+    display: none;
+  }
+  /*! Hero  */
+  .hero {
+    margin-top: -0.5rem;
+  }
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .links {
+    width: 30vw;
+  }
+  /*! Hero  */
+  .hero h1 {
+  }
+}
+@media screen and (min-width: 1200px) {
+  .links {
+    width: 25vw;
+  }
+
+  /*! Hero */
+  .hero h1 {
+  }
+}
