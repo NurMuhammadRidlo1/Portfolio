@@ -24,10 +24,10 @@ body {
 }
 
 nav {
+  padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 nav .logo {
@@ -39,7 +39,6 @@ nav .logo {
   margin-left: 0.8rem;
   letter-spacing: 0.1rem;
   cursor: pointer;
-  font-size: 1.2rem;
 }
 
 .links {
@@ -54,13 +53,14 @@ nav .logo {
   position: absolute;
   right: 0;
   top: 0;
+  transform: translateX(100%);
 }
 .links a {
+  font-size: 1rem;
   text-decoration: none;
   color: white;
   color: black;
   font-weight: 500;
-  font-size: 1.2rem;
 }
 .links a:hover {
   opacity: 0.6;
@@ -103,21 +103,21 @@ nav .logo {
   text-align: center;
 }
 .hero h2 {
-  margin-top: 6rem;
-  font-size: 1.8rem;
+  margin-top: 5rem;
+  font-size: 1.5rem;
   font-weight: 400;
   color: var(--primary-color);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   font-weight: 300;
 }
 .hero h1 {
-  font-size: 3.5rem;
+  font-size: 2.4rem;
 }
 .hero h4 {
   font-family: "roboto", sans-serif;
   font-size: 1rem;
-  font-weight: 400;
-  margin-top: 2.5rem;
+  font-weight: 300;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   width: 70%;
 }
@@ -153,12 +153,12 @@ nav .logo {
 .work-section {
   background-color: var(--background-color);
   font-family: "roboto", sans-serif;
-  margin-top: 8rem;
+  margin-top: 0rem;
   width: 100vw;
 }
 .work-title {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
 }
 .work-title h2 {
   font-size: 1.8rem;
@@ -181,18 +181,18 @@ nav .logo {
 .project a.link-project {
   text-decoration: none;
   color: white;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 .project a.link-project {
   display: flex;
-  margin-top: -3rem;
-  margin-left: 2rem;
+  margin-top: -2rem;
+  margin-left: 1.2rem;
 }
 .project a.link-project:hover {
   opacity: 0.8;
 }
 .project a.link-project img {
-  width: 1.3rem;
+  width: 1.1rem;
 }
 .project a.link-project p {
   margin-left: 0.5rem;
@@ -207,19 +207,22 @@ section.tools {
 }
 .tools-caption {
   font-family: "kanit", sans-serif;
-  font-size: 1.2rem;
   text-align: center;
   margin-bottom: 2rem;
 }
 .tools-caption h3 {
+  margin: auto;
+  width: 80vw;
+  font-size: 1.1rem;
   font-weight: 400;
 }
 div.tools {
   margin: auto;
   width: 70vw;
   display: flex;
-  justify-content: space-between;
-  flex: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
 .tools img {
   width: 3rem;
@@ -236,12 +239,12 @@ footer .container {
 footer h2 {
   font-family: "kanit", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 0.5rem;
 }
 footer p {
   font-family: "roboto", sans-serif;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 footer p a {
   text-decoration: none;
@@ -298,6 +301,7 @@ footer a.button:hover {
     text-align: center;
     position: static;
     background-color: transparent;
+    transform: translateX(0);
   }
   .links a {
     color: white;
@@ -307,14 +311,12 @@ footer a.button:hover {
     text-decoration: 0;
   }
 
-  .hero {
-    margin-top: 3rem;
-  }
   .hamburger {
     display: none;
   }
 
   .hero h2 {
+    margin-top: 10rem;
     font-size: 1.8rem;
     letter-spacing: 0.1rem;
     margin-bottom: 1rem;
@@ -323,8 +325,9 @@ footer a.button:hover {
     font-size: 4rem;
   }
   .hero h4 {
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    margin-top: 2.4rem;
+    margin-bottom: 2rem;
     line-height: 1.5rem;
   }
   .hero .button a {
@@ -336,15 +339,18 @@ footer a.button:hover {
     margin-top: -4rem;
     margin-left: 2rem;
   }
+  .work-section .work-title h2 {
+    font-size: 2rem;
+  }
   /*! TOOLS SECTION  */
   .tools-caption {
     font-family: "kanit", sans-serif;
-    font-size: 1.2rem;
     text-align: center;
     margin-bottom: 2rem;
   }
-  .tools-caption h3 {
+  .tools .tools-caption h3 {
     font-weight: 400;
+    font-size: 1.8rem;
   }
   div.tools {
     margin: auto;
@@ -375,6 +381,13 @@ footer a.button:hover {
     margin-bottom: 1rem;
     line-height: 1.5rem;
   }
+  .hero .button a {
+    padding: 0.5rem 2rem;
+  }
+  .hero .button {
+    font-size: 1.2rem;
+  }
+
   /*! WORK SECTION */
   .project a.link-project {
     display: flex;
@@ -392,7 +405,7 @@ footer a.button:hover {
     width: 3.5rem;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
   .links {
     width: 25vw;
   }
@@ -403,12 +416,14 @@ footer a.button:hover {
   }
   .hero h1 {
     font-size: 5rem;
+    line-height: 6rem;
   }
   .hero h4 {
     margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     line-height: 1.5rem;
-    width: 40vw;
+    font-size: 1.2rem;
+    width: 43vw;
   }
   /*! WORK SECION */
 
@@ -417,11 +432,40 @@ footer a.button:hover {
     margin-top: -7rem;
     margin-left: 3.5rem;
   }
+  .work-section .work-title h2 {
+    font-size: 3rem;
+  }
+  .work-section .work-title h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
   /*! TOOLS  */
+  .tools .tools-caption h3 {
+    font-size: 2rem;
+  }
   div.tools {
     width: 50vw;
   }
   .tools img {
     width: 4rem;
+  }
+
+  /* !Footer */
+  footer h2 {
+    font-size: 2.4rem;
+  }
+  footer p {
+    font-size: 1.5rem;
+    margin: 0.5rem 0 1.5rem 0;
+  }
+  footer .social-media img {
+    width: 1.8rem;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  footer a.button {
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
   }
 }

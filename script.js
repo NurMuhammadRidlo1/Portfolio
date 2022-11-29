@@ -3,9 +3,6 @@ const burger = document.querySelector(".hamburger");
 burger.addEventListener("click", () => {
   burger.classList.toggle("active");
   if (burger.classList.contains("active")) {
-    gsap.to(".links", { x: "100%", opacity: 1 });
-    gsap.to(".hamburger span", { background: "white" });
-  } else {
     gsap.to(".links", { x: "0%", opacity: 1 });
     gsap.to(".hamburger span", { background: "black" });
     gsap.fromTo(
@@ -13,6 +10,9 @@ burger.addEventListener("click", () => {
       { opacity: 0, y: 0 },
       { opacity: 1, y: 20, delay: 0.4, stagger: 0.25 }
     );
+  } else {
+    gsap.to(".links", { x: "100%", opacity: 1 });
+    gsap.to(".hamburger span", { background: "white" });
     //  gsap.set("body", { overflow: "hidden" });
   }
 });
